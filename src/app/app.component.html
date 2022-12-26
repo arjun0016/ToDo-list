@@ -1,0 +1,10 @@
+<div class="mt-5" align="center">
+  <h1>Todo list</h1>
+  <input type="text " class="form-control w-25" id="id" [(ngModel)]="task">
+  <a href="#" class="btn btn-primary mt-3" (click)="addTask(task)">Add</a>
+</div>
+<br>
+<br>
+<ul  *ngFor="let task of list" align="center">
+ <h3> {{task.name}}</h3> <br> <button class="btn btn-danger" (click)="remove(task.id)">Remove</button>
+</ul>
